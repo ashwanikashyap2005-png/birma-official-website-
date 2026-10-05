@@ -1,0 +1,9 @@
+services:
+  birma-audit:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db:/app/db
+      - ./uploads:/app/uploads
+    restart: unless-stopped
